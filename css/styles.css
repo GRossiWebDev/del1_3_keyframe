@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	padding: 0 3%;
+	}
+h1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 1rem 0;
+	}
+p{
+	margin: 0 0 .5rem 0;
+	}
+	#button {
+	position: relative;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+	top: -175px;
+	left: -20px;
+	opacity: 0;
+	animation: learn-button-anim 10s linear 5s forwards;
+}
+#anim_frame{
+	background-image: url(../img/wood.jpg);
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	border: solid #000 1px;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+#anim_frame h2{
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2rem;
+	font-weight: bold;
+	position: relative;
+	top: 135px;
+	left: 115px;
+	opacity: 0;
+	animation: h2-stuff 10s linear 0s;
+}
+
+@keyframes h2-stuff {
+	/* at first, h2 is invisible, off the top */
+	0% {
+		opacity: 0;
+	}
+
+	/* 1 second later, h2 has not changed */
+	10% {
+		opacity: 0;
+	/*2 seconds in, h2 has moved down and faded up */
+}
+	20% {
+			opacity: 1;
+		}
+
+	36%{
+			opacity: 1;
+		}
+
+	37%{
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+
+} /* END h2-stuff anim  */
+
+#roomba{
+	position: relative;
+	top: 100px;
+	left: -300px;
+	animation: roomba-anim 10s linear 0s;
+}
+
+#roomba-logo{
+	max-width: 200px;
+	position: relative;
+	opacity: 0;
+	animation: roomba-logo-anim 10s linear 5s forwards;
+	top: -235px;
+	left: 150px;
+}
+
+@keyframes roomba-anim {
+
+	0% {
+		top: 100px;
+		left: -300px;
+	}
+
+	20% {
+		top: 100px;
+		left: -300px;
+	}
+
+	40%{
+		top: 0px;
+		left: 200px;
+		transform: rotate(0deg);
+	}
+	50%{
+		top: -350px;
+		left: 350px;
+		transform: rotate(-70deg);
+	}
+
+	100%{
+		top: -350px;
+		left: 350px;
+		transform: rotate(-70deg);
+	}
+
+}/*END roomba-anim */
+
+@keyframes roomba-logo-anim{
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+			opacity: 1;
+		}
+
+	36%{
+			opacity: 1;
+		}
+
+	37%{
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes learn-button-anim{
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+			opacity: 1;
+		}
+
+	36%{
+			opacity: 1;
+		}
+
+	37%{
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
